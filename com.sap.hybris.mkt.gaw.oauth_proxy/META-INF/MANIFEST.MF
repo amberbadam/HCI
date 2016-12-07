@@ -1,0 +1,109 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: .,/mapping/com.sap.hci.met.oauth.secureapiwrapper-1.
+ 0.0-SNAPSHOT.jar,/mapping/com.sap.hci.met.oauth.tokencontainer-1.0.0-
+ SNAPSHOT.jar,/src/main/resources/mapping/com.sap.hci.met.oauth.secure
+ apiwrapper-1.0.0-SNAPSHOT.jar,/src/main/resources/mapping/com.sap.hci
+ .met.oauth.tokencontainer-1.0.0-SNAPSHOT.jar,/mapping/com.sap.hci.met
+ .oauth.secureapiwrapper-1.0.0-SNAPSHOT.jar,/mapping/com.sap.hci.met.o
+ auth.tokencontainer-1.0.0-SNAPSHOT.jar,/src/main/resources/mapping/co
+ m.sap.hci.met.oauth.secureapiwrapper-1.0.0-SNAPSHOT.jar,/src/main/res
+ ources/mapping/com.sap.hci.met.oauth.tokencontainer-1.0.0-SNAPSHOT.ja
+ r,/src/main/resources/mapping/com.sap.hci.met.oauth.tokencontainer-1.
+ 0.0-SNAPSHOT.jar,/src/main/resources/mapping/com.sap.hci.met.oauth.se
+ cureapiwrapper-1.0.0-SNAPSHOT.jar,/mapping/com.sap.hci.met.oauth.toke
+ ncontainer-1.0.0-SNAPSHOT.jar,/mapping/com.sap.hci.met.oauth.secureap
+ iwrapper-1.0.0-SNAPSHOT.jar,/mapping/com.sap.hci.met.oauth.secureapiw
+ rapper-1.0.0-SNAPSHOT.jar,/mapping/com.sap.hci.met.oauth.tokencontain
+ er-1.0.0-SNAPSHOT.jar,/src/main/resources/mapping/com.sap.hci.met.oau
+ th.secureapiwrapper-1.0.0-SNAPSHOT.jar,/src/main/resources/mapping/co
+ m.sap.hci.met.oauth.tokencontainer-1.0.0-SNAPSHOT.jar,/src/main/resou
+ rces/script/lib/com.sap.hci.met.oauth.tokencontainer-1.0.0-SNAPSHOT.j
+ ar,/src/main/resources/script/lib/com.sap.hci.met.oauth.secureapiwrap
+ per-1.0.0-SNAPSHOT.jar,/src/main/resources/script/lib/com.sap.hci.met
+ .oauth.secureapiwrapper-1.0.0-SNAPSHOT.jar,/src/main/resources/script
+ /lib/com.sap.hci.met.oauth.tokencontainer-1.0.0-SNAPSHOT.jar,/src/mai
+ n/resources/script/lib/com.sap.hci.met.oauth.secureapiwrapper-1.0.0-S
+ NAPSHOT.jar,/src/main/resources/script/lib/com.sap.hci.met.oauth.toke
+ ncontainer-1.0.0-SNAPSHOT.jar,/src/main/resources/script/lib/com.sap.
+ hci.met.oauth.secureapiwrapper-1.0.0-SNAPSHOT.jar,/src/main/resources
+ /script/lib/com.sap.hci.met.oauth.tokencontainer-1.0.0-SNAPSHOT.jar,/
+ src/main/resources/script/lib/com.sap.hci.met.oauth.secureapiwrapper-
+ 1.0.0-SNAPSHOT.jar,/src/main/resources/script/lib/com.sap.hci.met.oau
+ th.tokencontainer-1.0.0-SNAPSHOT.jar,/src/main/resources/script/lib/c
+ om.sap.hci.met.oauth.secureapiwrapper-1.0.0-SNAPSHOT.jar,/src/main/re
+ sources/script/lib/com.sap.hci.met.oauth.tokencontainer-1.0.0-SNAPSHO
+ T.jar,/src/main/resources/script/lib/com.sap.hci.met.oauth.secureapiw
+ rapper-1.0.0-SNAPSHOT.jar,/src/main/resources/script/lib/com.sap.hci.
+ met.oauth.tokencontainer-1.0.0-SNAPSHOT.jar
+Origin-Bundle-SymbolicName: com.sap.hybris.mkt.gaw.oauth_proxy
+Bundle-Name: com.sap.hybris.mkt.gaw.oauth_proxy
+Origin-ModifiedDate: 1474553074666
+Import-Service:  com.sap.esb.camel.security.cms.SignatureSplitter;mult
+ iple:=false, org.apache.cxf.ws.rm.persistence.RMStore;multiple:=false
+ , javax.sql.DataSource;multiple:=false;filter="(dataSourceName=defaul
+ t)", com.sap.esb.security.TrustManagerFactory;multiple:=false,  com.s
+ ap.esb.security.KeyManagerFactory;multiple:=false, com.sap.esb.camel.
+ endpoint.configurator.api.EndpointConfigurator;multiple:=false;filter
+ ="(endpointType=SFTP)",com.sap.esb.webservice.audit.log.AuditLogger 
+SAP-BundleType: IntegrationFlow
+Bundle-Version: 1.0.1
+SAP-NodeType: IFLMAP
+Origin-Bundle-Version: 1.0.1
+Bundle-ManifestVersion: 2
+SAP-ArtifactId: 623be1b7-6e09-4bc8-9aef-586ff8b40f8a
+Bundle-Description: 
+Bundle-SymbolicName: com.sap.hybris.mkt.gaw.oauth_proxy;singleton:=tru
+ e
+Import-Package:  org.springframework.transaction.support, org.apache.w
+ ss4j.common.crypto, com.sap.esb.camel.http.ahc.configurer;version="[1
+ ,2)", org.springframework.jdbc.datasource, org.mozilla.javascript, or
+ g.codehaus.groovy.reflection, org.codehaus.groovy.runtime.callsite, o
+ rg.codehaus.groovy.runtime.typehandling, org.codehaus.groovy.runtime,
+  groovy.lang, org.codehaus.groovy.jsr223, com.sap.gateway.ip.core.cus
+ tomdev.util, com.sap.gateway.ip.core.customdev.logging, com.sap.gatew
+ ay.ip.core.customdev.processor, com.sap.esb.camel.message.storage.api
+ , com.sap.it.op.agent.trace, com.sap.esb.webservice.security.crypto.a
+ pi, com.sap.esb.webservice.policy.alternative.selector, org.apache.cx
+ f.ws.security.wss4j, org.apache.ws.security.components.crypto, javax.
+ security.auth.callback, com.sap.esb.camel.jdbc.idempotency.reorg, com
+ .sap.it.iflow.model.runtime, com.sap.it.iflow.model, com.sap.sod.util
+ s.soap.processors, com.sap.it.rt.scc.proxy, com.sap.esb.camel.jdbc.in
+ progress.repository, com.sap.esb.camel.jdbc.idempotency.repository, c
+ om.sap.esb.camel.security.cms, org.apache.camel.processor.idempotent.
+ jdbc, org.apache.camel.spi, com.sap.esb.camel.endpoint.configurator.a
+ pi, com.sap.it.op.ed, com.sap.esb.webservice.authorization.supplier.a
+ pi, org.apache.cxf.interceptor.security, com.sap.esb.camel.mpl.access
+ , com.sap.esb.camel.eip.splitter, com.sap.it.op.agent.ed.plugins.came
+ l.api, com.sap.esb.camel.xmljson, net.sf.saxon.xpath, net.sf.saxon,co
+ m.sap.esb.application.services.cxf.interceptor,com.sap.esb.security,c
+ om.sap.it.op.agent.api,com.sap.it.op.agent.collector.camel,com.sap.it
+ .op.agent.collector.cxf,com.sap.it.op.agent.mpl,com.sap.sod.utils.cxf
+ .interceptors,com.sap.sod.utils.encoding.processors,com.sap.sod.utils
+ .idoc.soap,com.sap.sod.utils.soap,com.sap.sod.utils.idoc.soap.process
+ ors,javax.jms,javax.jws,javax.wsdl,javax.xml.bind.annotation,javax.xm
+ l.namespace,javax.xml.ws,org.apache.camel;version="2.8",org.apache.ca
+ mel.builder;version="2.8",org.apache.camel.builder.xml;version="2.8",
+ org.apache.camel.component.cxf,org.apache.camel.model;version="2.8",o
+ rg.apache.camel.processor;version="2.8",org.apache.camel.processor.ag
+ gregate;version="2.8",org.apache.camel.spring.spi;version="2.8",org.a
+ pache.commons.logging,org.apache.cxf.binding,org.apache.cxf.binding.s
+ oap,org.apache.cxf.binding.soap.spring,org.apache.cxf.bus,org.apache.
+ cxf.bus.resource,org.apache.cxf.bus.spring,org.apache.cxf.buslifecycl
+ e,org.apache.cxf.catalog,org.apache.cxf.configuration.jsse,org.apache
+ .cxf.configuration.spring,org.apache.cxf.endpoint,org.apache.cxf.head
+ ers,org.apache.cxf.interceptor,org.apache.cxf.management.counters,org
+ .apache.cxf.message,org.apache.cxf.phase,org.apache.cxf.resource,org.
+ apache.cxf.service.factory,org.apache.cxf.service.model,org.apache.cx
+ f.transport,org.apache.cxf.transport.common.gzip,org.apache.cxf.trans
+ port.http,org.apache.cxf.transport.http.policy,org.apache.cxf.workque
+ ue,org.apache.cxf.ws.rm.persistence,org.apache.cxf.wsdl11,org.osgi.fr
+ amework;version="1.6.0",org.osgi.service.blueprint;version="[1.0.0,2.
+ 0.0)",org.slf4j;version="1.6",org.springframework.beans.factory.confi
+ g;version="3.0",com.sap.aii.ib.bom.flib.types,com.sap.aii.mapping.api
+ ,com.sap.aii.mappingtool.flib3,com.sap.aii.mappingtool.flib7,com.sap.
+ aii.mappingtool.tf3,com.sap.aii.mappingtool.tf3.rt,com.sap.aii.mappin
+ gtool.tf7,com.sap.aii.mappingtool.tf7.rt,com.sap.aii.mappingtool.tfap
+ i,com.sap.esb.webservice.audit.log
+SAP-ContentMode: ConfigureOnly
+Origin-Bundle-Name: com.sap.hybris.mkt.gaw.oauth_proxy
+
