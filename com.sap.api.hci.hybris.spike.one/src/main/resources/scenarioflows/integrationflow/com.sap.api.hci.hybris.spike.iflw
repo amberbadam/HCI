@@ -1,0 +1,1078 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:ns="http://www.w3.org/2001/XMLSchema" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.2.5.Final-v20160831-1132-B114" name="Definitions 1" targetNamespace="http://com.sap.it.ifl.tooling/default/flow">
+  <bpmn2:extensionElements>
+    <ifl:property>
+      <key>IntegrationFlowVersion</key>
+      <value>1.0</value>
+    </ifl:property>
+  </bpmn2:extensionElements>
+  <bpmn2:extensionElements>
+    <ifl:property>
+      <key>IntegrationFlowVersion</key>
+      <value>1.0</value>
+    </ifl:property>
+  </bpmn2:extensionElements>
+  <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
+    <bpmn2:extensionElements>
+      <ifl:property>
+        <key>routeid</key>
+        <value>MyProject</value>
+      </ifl:property>
+      <ifl:property>
+        <key>errorStrategy</key>
+        <value>None</value>
+      </ifl:property>
+      <ifl:property>
+        <key>traceLevel</key>
+        <value>Message Body and Header</value>
+      </ifl:property>
+    </bpmn2:extensionElements>
+    <bpmn2:participant id="Participant_1" ifl:type="EndpointSender" name="API">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>enableBasicAuthentication</key>
+          <value>true</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+    </bpmn2:participant>
+    <bpmn2:participant id="Participant_3" ifl:type="IntegrationProcess" name="Integration Process" processRef="Process_1"/>
+    <bpmn2:participant id="Participant_4" ifl:type="EndpointRecevier" name="HybrisAS"/>
+    <bpmn2:participant id="_Participant_2" ifl:type="IntegrationProcess" name="GetProductsWithInitialTokens" processRef="Process_2"/>
+    <bpmn2:participant id="_Participant_3" ifl:type="IntegrationProcess" name="ExistingTokens" processRef="Process_3"/>
+    <bpmn2:messageFlow id="MessageFlow_1" sourceRef="Participant_1" targetRef="StartEvent_1">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>Name</key>
+        </ifl:property>
+        <ifl:property>
+          <key>Description</key>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentType</key>
+          <value>HTTPS</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocol</key>
+          <value>HTTPS</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocolVersion</key>
+          <value>1.0.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocol</key>
+          <value>None</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocolVersion</key>
+          <value>1.0.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentNS</key>
+          <value>sap</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVId</key>
+          <value>1.0.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVName</key>
+          <value>1.0.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>clientCertificates</key>
+        </ifl:property>
+        <ifl:property>
+          <key>urlPath</key>
+          <value>/Products1</value>
+        </ifl:property>
+        <ifl:property>
+          <key>senderAuthType</key>
+          <value>RoleBased</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+    </bpmn2:messageFlow>
+    <bpmn2:messageFlow id="MessageFlow_3" sourceRef="ServiceTask_1" targetRef="Participant_4">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>Name</key>
+          <value> </value>
+        </ifl:property>
+        <ifl:property>
+          <key>Description</key>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentType</key>
+          <value>HTTP</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocol</key>
+          <value>HTTP</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocolVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocol</key>
+          <value>None</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocolVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentNS</key>
+          <value>sap</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVId</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVName</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>proxyType</key>
+          <value>On-Premise</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpMethod</key>
+          <value>POST</value>
+        </ifl:property>
+        <ifl:property>
+          <key>authenticationMethod</key>
+          <value>None</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpRequestTimeout</key>
+          <value>60000</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpAddressWithoutQuery</key>
+          <value>http://tst.admin.shop.mylighting.philips.com:80/authorizationserver/oauth/token</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpAddressQuery</key>
+          <value>&amp;username=test1@philips.com&amp;password=${property.password}&amp;grant_type=password&amp;client_id=mobile_android&amp;client_secret=secret</value>
+        </ifl:property>
+        <ifl:property>
+          <key>credentialName</key>
+          <value>HYBRIS_TEST</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+    </bpmn2:messageFlow>
+    <bpmn2:messageFlow id="MessageFlow_2" sourceRef="ServiceTask_2" targetRef="Participant_4">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>Name</key>
+          <value>FetchProducts</value>
+        </ifl:property>
+        <ifl:property>
+          <key>Description</key>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentType</key>
+          <value>HTTP</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocol</key>
+          <value>HTTP</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocolVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocol</key>
+          <value>None</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocolVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentNS</key>
+          <value>sap</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVId</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVName</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>proxyType</key>
+          <value>On-Premise</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpMethod</key>
+          <value>GET</value>
+        </ifl:property>
+        <ifl:property>
+          <key>authenticationMethod</key>
+          <value>None</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpRequestTimeout</key>
+          <value>60000</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpAddressWithoutQuery</key>
+          <value>http://tst.admin.shop.mylighting.philips.com/rest/v2/US01_02/products/search</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpAddressQuery</key>
+          <value>query=UNV::brand:DAY&amp;fields=products(code,name)</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+    </bpmn2:messageFlow>
+    <bpmn2:messageFlow id="MessageFlow_4" sourceRef="ServiceTask_3" targetRef="Participant_4">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>Name</key>
+          <value>FecthProductsAccessToken</value>
+        </ifl:property>
+        <ifl:property>
+          <key>Description</key>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentType</key>
+          <value>HTTP</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocol</key>
+          <value>HTTP</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocolVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocol</key>
+          <value>None</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocolVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentNS</key>
+          <value>sap</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVId</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVName</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>proxyType</key>
+          <value>On-Premise</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpMethod</key>
+          <value>GET</value>
+        </ifl:property>
+        <ifl:property>
+          <key>authenticationMethod</key>
+          <value>None</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpRequestTimeout</key>
+          <value>60000</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpAddressQuery</key>
+          <value>query=UNV::brand:DAY&amp;fields=products(code,name)</value>
+        </ifl:property>
+        <ifl:property>
+          <key>httpAddressWithoutQuery</key>
+          <value>http://tst.admin.shop.mylighting.philips.com/rest/v2/US01_02/products/search</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+    </bpmn2:messageFlow>
+  </bpmn2:collaboration>
+  <bpmn2:process id="Process_1" isExecutable="false">
+    <bpmn2:startEvent id="StartEvent_1" name="Start">
+      <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+      <bpmn2:messageEventDefinition id="MessageEventDefinition_1"/>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="EndEvent_1" name="End">
+      <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
+      <bpmn2:messageEventDefinition id="MessageEventDefinition_2"/>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_3" sourceRef="StartEvent_1" targetRef="CallActivity_2"/>
+    <bpmn2:callActivity id="CallActivity_2" name="Content Modifier">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Enricher</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.1</value>
+        </ifl:property>
+        <ifl:property>
+          <key>property_0</key>
+          <value>Action:=:Create:;Name:=:password:;Type:=:constant:;Datatype:=:java.langString:;Value:=:Test@123:;Default:=:</value>
+        </ifl:property>
+        <ifl:property>
+          <key>HEADER_0</key>
+          <value>Action:=:Create:;Name:=:username:;Type:=:constant:;Datatype:=:java.lang.String:;Value:=:test1@philips.com:;Default:=:</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="CallActivity_3" name="Script">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Script</value>
+        </ifl:property>
+        <ifl:property>
+          <key>script</key>
+          <value>AddAuthorization.groovy</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_23</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:serviceTask id="ServiceTask_1" name="Request-Reply">
+      <bpmn2:incoming>SequenceFlow_23</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_18</bpmn2:outgoing>
+    </bpmn2:serviceTask>
+    <bpmn2:callActivity id="CallActivity_5" name="Process Call">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>ProcessCallElement</value>
+        </ifl:property>
+        <ifl:property>
+          <key>processId</key>
+          <value>Process_2</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_18</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_6" sourceRef="CallActivity_5" targetRef="EndEvent_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_8" sourceRef="CallActivity_2" targetRef="CallActivity_4"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_18" sourceRef="ServiceTask_1" targetRef="CallActivity_5"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_23" sourceRef="CallActivity_3" targetRef="ServiceTask_1"/>
+    <bpmn2:callActivity id="CallActivity_4" name="Get">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>DBstorage</value>
+        </ifl:property>
+        <ifl:property>
+          <key>operation</key>
+          <value>get</value>
+        </ifl:property>
+        <ifl:property>
+          <key>storageName</key>
+          <value>username</value>
+        </ifl:property>
+        <ifl:property>
+          <key>alert</key>
+          <value></value>
+        </ifl:property>
+        <ifl:property>
+          <key>expire</key>
+          <value></value>
+        </ifl:property>
+        <ifl:property>
+          <key>encrypt</key>
+          <value></value>
+        </ifl:property>
+        <ifl:property>
+          <key>visibility</key>
+          <value>global</value>
+        </ifl:property>
+        <ifl:property>
+          <key>dataStoreId</key>
+          <value>test1@philips.com</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_8</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_12</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_2" name="Router" gatewayDirection="Diverging" default="SequenceFlow_7">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>raiseAlert</key>
+          <value>false</value>
+        </ifl:property>
+        <ifl:property>
+          <key>throwException</key>
+          <value>false</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_12</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_13</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_7</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_12" sourceRef="CallActivity_4" targetRef="ExclusiveGateway_2"/>
+    <bpmn2:callActivity id="CallActivity_6" name="Process Call">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>ProcessCallElement</value>
+        </ifl:property>
+        <ifl:property>
+          <key>processId</key>
+          <value>Process_3</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_13</bpmn2:incoming>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_13" name="Access Token Exists" sourceRef="ExclusiveGateway_2" targetRef="CallActivity_6">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>expressionType</key>
+          <value>XML</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="_FormalExpression_2020">//access_token != &quot;&quot;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_7" name="Get Token" sourceRef="ExclusiveGateway_2" targetRef="CallActivity_3"/>
+    <bpmn2:subProcess id="SubProcess_1" name="Exception SubProcess">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>ErrorEventSubProcessTemplate</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:startEvent id="StartEvent_4" name="Start Event 4">
+        <bpmn2:outgoing>SequenceFlow_25</bpmn2:outgoing>
+        <bpmn2:errorEventDefinition id="ErrorEventDefinition_1"/>
+      </bpmn2:startEvent>
+      <bpmn2:callActivity id="CallActivity_15" name="Content Modifier">
+        <bpmn2:extensionElements>
+          <ifl:property>
+            <key>activityType</key>
+            <value>Enricher</value>
+          </ifl:property>
+          <ifl:property>
+            <key>componentVersion</key>
+            <value>1.1</value>
+          </ifl:property>
+          <ifl:property>
+            <key>wrapContent</key>
+            <value>&lt;error_text>&#xD;
+An exception has occured.These are the details:&#xD;
+${exception.message}&#xD;
+${exception.stacktrace}&#xD;
+&lt;/error_text></value>
+          </ifl:property>
+        </bpmn2:extensionElements>
+        <bpmn2:incoming>SequenceFlow_25</bpmn2:incoming>
+        <bpmn2:outgoing>SequenceFlow_27</bpmn2:outgoing>
+      </bpmn2:callActivity>
+      <bpmn2:sequenceFlow id="SequenceFlow_25" sourceRef="StartEvent_4" targetRef="CallActivity_15"/>
+      <bpmn2:endEvent id="EndEvent_6" name="End Event 6">
+        <bpmn2:incoming>SequenceFlow_27</bpmn2:incoming>
+        <bpmn2:errorEventDefinition id="ErrorEventDefinition_3"/>
+      </bpmn2:endEvent>
+      <bpmn2:sequenceFlow id="SequenceFlow_27" sourceRef="CallActivity_15" targetRef="EndEvent_6"/>
+    </bpmn2:subProcess>
+  </bpmn2:process>
+  <bpmn2:process id="Process_2" name="Process 2" isExecutable="false">
+    <bpmn2:extensionElements>
+      <ifl:property>
+        <key>processType</key>
+        <value>directCall</value>
+      </ifl:property>
+    </bpmn2:extensionElements>
+    <bpmn2:startEvent id="StartEvent_2" name="Start Event 2">
+      <bpmn2:outgoing>SequenceFlow_19</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:callActivity id="CallActivity_12" name="Write">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>DBstorage</value>
+        </ifl:property>
+        <ifl:property>
+          <key>operation</key>
+          <value>put</value>
+        </ifl:property>
+        <ifl:property>
+          <key>storageName</key>
+          <value>username</value>
+        </ifl:property>
+        <ifl:property>
+          <key>alert</key>
+          <value>2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>expire</key>
+          <value>90</value>
+        </ifl:property>
+        <ifl:property>
+          <key>encrypt</key>
+          <value>true</value>
+        </ifl:property>
+        <ifl:property>
+          <key>visibility</key>
+          <value>global</value>
+        </ifl:property>
+        <ifl:property>
+          <key>messageId</key>
+          <value>${header.username}</value>
+        </ifl:property>
+        <ifl:property>
+          <key>override</key>
+          <value>true</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_21</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="CallActivity_7" name="Script">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Script</value>
+        </ifl:property>
+        <ifl:property>
+          <key>script</key>
+          <value>SetUserNameForDatastore.js</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_11</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_5" sourceRef="CallActivity_7" targetRef="CallActivity_12"/>
+    <bpmn2:callActivity id="CallActivity_9" name="Content Modifier">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Enricher</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.1</value>
+        </ifl:property>
+        <ifl:property>
+          <key>wrapContent</key>
+          <value>{&#xD;
+&quot;Root&quot;:&#xD;
+${in.body}&#xD;
+}</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_19</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_4" sourceRef="CallActivity_9" targetRef="CallActivity_10"/>
+    <bpmn2:callActivity id="CallActivity_10" name="JSON to XML Converter">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>JsonToXmlConverter</value>
+        </ifl:property>
+        <ifl:property>
+          <key>Activity_Name</key>
+          <value>JSON to XML Converter</value>
+        </ifl:property>
+        <ifl:property>
+          <key>useNamespaces</key>
+          <value>true</value>
+        </ifl:property>
+        <ifl:property>
+          <key>jsonNamespaceSeparator</key>
+          <value>,</value>
+        </ifl:property>
+        <ifl:property>
+          <key>jsonInputEncoding</key>
+          <value></value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_11</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_11" sourceRef="CallActivity_10" targetRef="CallActivity_7"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_19" sourceRef="StartEvent_2" targetRef="CallActivity_9"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_21" sourceRef="CallActivity_12" targetRef="CallActivity_11"/>
+    <bpmn2:callActivity id="CallActivity_1" name="Script">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Script</value>
+        </ifl:property>
+        <ifl:property>
+          <key>script</key>
+          <value>addAccessToken.js</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_24</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="CallActivity_11" name="Content Modifier">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Enricher</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.1</value>
+        </ifl:property>
+        <ifl:property>
+          <key>property_0</key>
+          <value>Action:=:Create:;Name:=:access_token:;Type:=:xpath:;Datatype:=:java.lang.String:;Value:=://access_token:;Default:=:</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_21</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_24</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_24" sourceRef="CallActivity_11" targetRef="CallActivity_1"/>
+    <bpmn2:serviceTask id="ServiceTask_2" name="Request-Reply">
+      <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
+    </bpmn2:serviceTask>
+    <bpmn2:sequenceFlow id="SequenceFlow_1" sourceRef="CallActivity_1" targetRef="ServiceTask_2"/>
+    <bpmn2:endEvent id="EndEvent_2" name="End Event 2">
+      <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_2" sourceRef="ServiceTask_2" targetRef="EndEvent_2"/>
+  </bpmn2:process>
+  <bpmn2:process id="Process_3" name="Process 3" isExecutable="false">
+    <bpmn2:extensionElements>
+      <ifl:property>
+        <key>processType</key>
+        <value>directCall</value>
+      </ifl:property>
+    </bpmn2:extensionElements>
+    <bpmn2:startEvent id="StartEvent_3" name="Start Event 3">
+      <bpmn2:outgoing>SequenceFlow_14</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="EndEvent_3" name="End Event 3">
+      <bpmn2:incoming>SequenceFlow_17</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:sequenceFlow id="SequenceFlow_14" sourceRef="StartEvent_3" targetRef="CallActivity_8"/>
+    <bpmn2:callActivity id="CallActivity_8" name="Content Modifier">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Enricher</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.1</value>
+        </ifl:property>
+        <ifl:property>
+          <key>property_0</key>
+          <value>Action:=:Create:;Name:=:access_token:;Type:=:xpath:;Datatype:=:java.lang.String:;Value:=://access_token:;Default:=:</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_14</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_15</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_15" sourceRef="CallActivity_8" targetRef="CallActivity_13"/>
+    <bpmn2:callActivity id="CallActivity_13" name="Script">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Script</value>
+        </ifl:property>
+        <ifl:property>
+          <key>script</key>
+          <value>addAccessToken.js</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_15</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_16</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_16" sourceRef="CallActivity_13" targetRef="ServiceTask_3"/>
+    <bpmn2:serviceTask id="ServiceTask_3" name="Request-Reply">
+      <bpmn2:incoming>SequenceFlow_16</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_17</bpmn2:outgoing>
+    </bpmn2:serviceTask>
+    <bpmn2:sequenceFlow id="SequenceFlow_17" sourceRef="ServiceTask_3" targetRef="EndEvent_3"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
+      <bpmndi:BPMNShape id="BPMNShape_Participant_1" bpmnElement="Participant_1" isHorizontal="false">
+        <dc:Bounds height="140.0" width="100.0" x="20.0" y="4.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_1">
+          <dc:Bounds height="15.0" width="18.0" x="61.0" y="7.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Participant_3" bpmnElement="Participant_3" isHorizontal="false">
+        <dc:Bounds height="316.0" width="713.0" x="275.0" y="0.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_3">
+          <dc:Bounds height="15.0" width="107.0" x="578.0" y="3.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Participant_4" bpmnElement="Participant_4" isHorizontal="false">
+        <dc:Bounds height="140.0" width="100.0" x="1029.0" y="315.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_16">
+          <dc:Bounds height="15.0" width="50.0" x="1054.0" y="318.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Participant_2" bpmnElement="_Participant_2" isHorizontal="false">
+        <dc:Bounds height="295.0" width="566.0" x="275.0" y="341.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_22">
+          <dc:Bounds height="15.0" width="162.0" x="477.0" y="344.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Participant_5" bpmnElement="_Participant_3" isHorizontal="false">
+        <dc:Bounds height="220.0" width="540.0" x="275.0" y="691.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_35">
+          <dc:Bounds height="15.0" width="84.0" x="503.0" y="694.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_SubProcess_1" bpmnElement="SubProcess_1" isExpanded="true">
+        <dc:Bounds height="107.0" width="426.0" x="547.0" y="201.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_28">
+          <dc:Bounds height="15.0" width="124.0" x="553.0" y="204.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_StartEvent_1" bpmnElement="StartEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="327.0" y="39.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4">
+          <dc:Bounds height="15.0" width="25.0" x="332.0" y="75.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_1" bpmnElement="EndEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="827.0" y="133.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_5">
+          <dc:Bounds height="15.0" width="22.0" x="834.0" y="169.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_2" bpmnElement="CallActivity_2" isExpanded="true">
+        <dc:Bounds height="60.0" width="120.0" x="285.0" y="100.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_10">
+          <dc:Bounds height="15.0" width="89.0" x="300.0" y="122.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_3" bpmnElement="CallActivity_3" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="547.0" y="39.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_12">
+          <dc:Bounds height="15.0" width="31.0" x="581.0" y="61.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ServiceTask_1" bpmnElement="ServiceTask_1">
+        <dc:Bounds height="50.0" width="110.0" x="671.0" y="44.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_14">
+          <dc:Bounds height="15.0" width="82.0" x="685.0" y="61.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_5" bpmnElement="CallActivity_5" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="676.0" y="121.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_19">
+          <dc:Bounds height="15.0" width="71.0" x="690.0" y="143.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_StartEvent_2" bpmnElement="StartEvent_2">
+        <dc:Bounds height="36.0" width="36.0" x="328.0" y="373.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_23">
+          <dc:Bounds height="15.0" width="68.0" x="312.0" y="409.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_12" bpmnElement="CallActivity_12" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="426.0" y="454.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_36">
+          <dc:Bounds height="15.0" width="28.0" x="462.0" y="476.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_7" bpmnElement="CallActivity_7" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="426.0" y="544.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_11">
+          <dc:Bounds height="15.0" width="31.0" x="460.0" y="566.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_9" bpmnElement="CallActivity_9" isExpanded="true">
+        <dc:Bounds height="60.0" width="120.0" x="286.0" y="454.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_26">
+          <dc:Bounds height="15.0" width="89.0" x="301.0" y="476.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_10" bpmnElement="CallActivity_10" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="296.0" y="544.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_37">
+          <dc:Bounds height="30.0" width="87.0" x="302.0" y="559.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_1" bpmnElement="CallActivity_1" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="548.0" y="544.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_42">
+          <dc:Bounds height="15.0" width="31.0" x="582.0" y="566.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_11" bpmnElement="CallActivity_11" isExpanded="true">
+        <dc:Bounds height="60.0" width="120.0" x="548.0" y="454.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_50">
+          <dc:Bounds height="15.0" width="89.0" x="563.0" y="476.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ServiceTask_2" bpmnElement="ServiceTask_2">
+        <dc:Bounds height="50.0" width="110.0" x="699.0" y="549.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_2">
+          <dc:Bounds height="15.0" width="82.0" x="713.0" y="566.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_2" bpmnElement="EndEvent_2">
+        <dc:Bounds height="36.0" width="36.0" x="727.0" y="453.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_13">
+          <dc:Bounds height="15.0" width="65.0" x="713.0" y="489.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_4" bpmnElement="CallActivity_4" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="295.0" y="199.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_24">
+          <dc:Bounds height="15.0" width="19.0" x="335.0" y="221.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_2" bpmnElement="ExclusiveGateway_2" isMarkerVisible="true">
+        <dc:Bounds height="36.0" width="36.0" x="448.0" y="133.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_30">
+          <dc:Bounds height="15.0" width="37.0" x="448.0" y="169.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_6" bpmnElement="CallActivity_6" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="416.0" y="39.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_33">
+          <dc:Bounds height="15.0" width="71.0" x="430.0" y="61.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_StartEvent_3" bpmnElement="StartEvent_3">
+        <dc:Bounds height="36.0" width="36.0" x="292.0" y="742.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_40">
+          <dc:Bounds height="15.0" width="68.0" x="276.0" y="778.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_3" bpmnElement="EndEvent_3">
+        <dc:Bounds height="36.0" width="36.0" x="555.0" y="854.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_43">
+          <dc:Bounds height="15.0" width="65.0" x="541.0" y="890.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_8" bpmnElement="CallActivity_8" isExpanded="true">
+        <dc:Bounds height="60.0" width="120.0" x="352.0" y="730.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_45">
+          <dc:Bounds height="15.0" width="89.0" x="367.0" y="752.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_13" bpmnElement="CallActivity_13" isExpanded="true">
+        <dc:Bounds height="60.0" width="100.0" x="362.0" y="818.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_47">
+          <dc:Bounds height="15.0" width="31.0" x="396.0" y="840.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ServiceTask_3" bpmnElement="ServiceTask_3">
+        <dc:Bounds height="50.0" width="110.0" x="518.0" y="752.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_52">
+          <dc:Bounds height="15.0" width="82.0" x="532.0" y="769.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_StartEvent_4" bpmnElement="StartEvent_4">
+        <dc:Bounds height="36.0" width="36.0" x="567.0" y="241.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_55">
+          <dc:Bounds height="15.0" width="68.0" x="551.0" y="277.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_15" bpmnElement="CallActivity_15" isExpanded="true">
+        <dc:Bounds height="60.0" width="120.0" x="657.0" y="229.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_58">
+          <dc:Bounds height="15.0" width="89.0" x="672.0" y="251.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_6" bpmnElement="EndEvent_6">
+        <dc:Bounds height="36.0" width="36.0" x="840.0" y="241.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_61">
+          <dc:Bounds height="15.0" width="65.0" x="826.0" y="277.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_MessageFlow_1" bpmnElement="MessageFlow_1" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_1">
+        <di:waypoint xsi:type="dc:Point" x="120.0" y="71.0"/>
+        <di:waypoint xsi:type="dc:Point" x="230.0" y="71.0"/>
+        <di:waypoint xsi:type="dc:Point" x="230.0" y="57.0"/>
+        <di:waypoint xsi:type="dc:Point" x="327.0" y="57.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_7">
+          <dc:Bounds height="15.0" width="39.0" x="211.0" y="66.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_3" bpmnElement="SequenceFlow_3" sourceElement="BPMNShape_StartEvent_1" targetElement="BPMNShape_CallActivity_2">
+        <di:waypoint xsi:type="dc:Point" x="345.0" y="75.0"/>
+        <di:waypoint xsi:type="dc:Point" x="345.0" y="87.0"/>
+        <di:waypoint xsi:type="dc:Point" x="345.0" y="100.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_9"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_MessageFlow_3" bpmnElement="MessageFlow_3" sourceElement="BPMNShape_ServiceTask_1" targetElement="BPMNShape_Participant_4">
+        <di:waypoint xsi:type="dc:Point" x="781.0" y="69.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1029.0" y="69.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1029.0" y="315.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_17">
+          <dc:Bounds height="15.0" width="31.0" x="1002.0" y="106.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_6" bpmnElement="SequenceFlow_6" sourceElement="BPMNShape_CallActivity_5" targetElement="BPMNShape_EndEvent_1">
+        <di:waypoint xsi:type="dc:Point" x="776.0" y="151.0"/>
+        <di:waypoint xsi:type="dc:Point" x="801.0" y="151.0"/>
+        <di:waypoint xsi:type="dc:Point" x="827.0" y="151.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_21"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_8" bpmnElement="SequenceFlow_8" sourceElement="BPMNShape_CallActivity_2" targetElement="BPMNShape_CallActivity_4">
+        <di:waypoint xsi:type="dc:Point" x="345.0" y="160.0"/>
+        <di:waypoint xsi:type="dc:Point" x="345.0" y="179.0"/>
+        <di:waypoint xsi:type="dc:Point" x="345.0" y="199.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_25"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_18" bpmnElement="SequenceFlow_18" sourceElement="BPMNShape_ServiceTask_1" targetElement="BPMNShape_CallActivity_5">
+        <di:waypoint xsi:type="dc:Point" x="726.0" y="94.0"/>
+        <di:waypoint xsi:type="dc:Point" x="726.0" y="111.0"/>
+        <di:waypoint xsi:type="dc:Point" x="726.0" y="121.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_38"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_5" bpmnElement="SequenceFlow_5" sourceElement="BPMNShape_CallActivity_7" targetElement="BPMNShape_CallActivity_12">
+        <di:waypoint xsi:type="dc:Point" x="476.0" y="544.0"/>
+        <di:waypoint xsi:type="dc:Point" x="476.0" y="529.0"/>
+        <di:waypoint xsi:type="dc:Point" x="476.0" y="514.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_15"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_4" bpmnElement="SequenceFlow_4" sourceElement="BPMNShape_CallActivity_9" targetElement="BPMNShape_CallActivity_10">
+        <di:waypoint xsi:type="dc:Point" x="346.0" y="514.0"/>
+        <di:waypoint xsi:type="dc:Point" x="346.0" y="529.0"/>
+        <di:waypoint xsi:type="dc:Point" x="346.0" y="544.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_29"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_11" bpmnElement="SequenceFlow_11" sourceElement="BPMNShape_CallActivity_10" targetElement="BPMNShape_CallActivity_7">
+        <di:waypoint xsi:type="dc:Point" x="396.0" y="574.0"/>
+        <di:waypoint xsi:type="dc:Point" x="411.0" y="574.0"/>
+        <di:waypoint xsi:type="dc:Point" x="411.0" y="574.0"/>
+        <di:waypoint xsi:type="dc:Point" x="426.0" y="574.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_20"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_19" bpmnElement="SequenceFlow_19" sourceElement="BPMNShape_StartEvent_2" targetElement="BPMNShape_CallActivity_9">
+        <di:waypoint xsi:type="dc:Point" x="346.0" y="409.0"/>
+        <di:waypoint xsi:type="dc:Point" x="346.0" y="431.0"/>
+        <di:waypoint xsi:type="dc:Point" x="346.0" y="454.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_39"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_21" bpmnElement="SequenceFlow_21" sourceElement="BPMNShape_CallActivity_12" targetElement="BPMNShape_CallActivity_11">
+        <di:waypoint xsi:type="dc:Point" x="526.0" y="484.0"/>
+        <di:waypoint xsi:type="dc:Point" x="537.0" y="484.0"/>
+        <di:waypoint xsi:type="dc:Point" x="548.0" y="484.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_41"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_23" bpmnElement="SequenceFlow_23" sourceElement="BPMNShape_CallActivity_3" targetElement="BPMNShape_ServiceTask_1">
+        <di:waypoint xsi:type="dc:Point" x="647.0" y="69.0"/>
+        <di:waypoint xsi:type="dc:Point" x="661.0" y="69.0"/>
+        <di:waypoint xsi:type="dc:Point" x="671.0" y="69.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_49"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_24" bpmnElement="SequenceFlow_24" sourceElement="BPMNShape_CallActivity_11" targetElement="BPMNShape_CallActivity_1">
+        <di:waypoint xsi:type="dc:Point" x="608.0" y="514.0"/>
+        <di:waypoint xsi:type="dc:Point" x="608.0" y="529.0"/>
+        <di:waypoint xsi:type="dc:Point" x="598.0" y="529.0"/>
+        <di:waypoint xsi:type="dc:Point" x="598.0" y="544.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_51"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_1" bpmnElement="SequenceFlow_1" sourceElement="BPMNShape_CallActivity_1" targetElement="BPMNShape_ServiceTask_2">
+        <di:waypoint xsi:type="dc:Point" x="648.0" y="574.0"/>
+        <di:waypoint xsi:type="dc:Point" x="658.0" y="574.0"/>
+        <di:waypoint xsi:type="dc:Point" x="658.0" y="574.0"/>
+        <di:waypoint xsi:type="dc:Point" x="699.0" y="574.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_6"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_MessageFlow_2" bpmnElement="MessageFlow_2" sourceElement="BPMNShape_ServiceTask_2" targetElement="BPMNShape_Participant_4">
+        <di:waypoint xsi:type="dc:Point" x="772.0" y="549.0"/>
+        <di:waypoint xsi:type="dc:Point" x="772.0" y="455.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1029.0" y="455.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_8">
+          <dc:Bounds height="15.0" width="31.0" x="839.0" y="456.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_ServiceTask_2" targetElement="BPMNShape_EndEvent_2">
+        <di:waypoint xsi:type="dc:Point" x="735.0" y="549.0"/>
+        <di:waypoint xsi:type="dc:Point" x="735.0" y="519.0"/>
+        <di:waypoint xsi:type="dc:Point" x="745.0" y="519.0"/>
+        <di:waypoint xsi:type="dc:Point" x="745.0" y="489.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_18"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_12" bpmnElement="SequenceFlow_12" sourceElement="BPMNShape_CallActivity_4" targetElement="BPMNShape_ExclusiveGateway_2">
+        <di:waypoint xsi:type="dc:Point" x="395.0" y="229.0"/>
+        <di:waypoint xsi:type="dc:Point" x="466.0" y="229.0"/>
+        <di:waypoint xsi:type="dc:Point" x="466.0" y="169.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_32"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_13" bpmnElement="SequenceFlow_13" sourceElement="BPMNShape_ExclusiveGateway_2" targetElement="BPMNShape_CallActivity_6">
+        <di:waypoint xsi:type="dc:Point" x="466.0" y="133.0"/>
+        <di:waypoint xsi:type="dc:Point" x="466.0" y="116.0"/>
+        <di:waypoint xsi:type="dc:Point" x="466.0" y="99.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_34">
+          <dc:Bounds height="30.0" width="73.0" x="443.0" y="118.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_14" bpmnElement="SequenceFlow_14" sourceElement="BPMNShape_StartEvent_3" targetElement="BPMNShape_CallActivity_8">
+        <di:waypoint xsi:type="dc:Point" x="328.0" y="760.0"/>
+        <di:waypoint xsi:type="dc:Point" x="340.0" y="760.0"/>
+        <di:waypoint xsi:type="dc:Point" x="352.0" y="760.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_44"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_15" bpmnElement="SequenceFlow_15" sourceElement="BPMNShape_CallActivity_8" targetElement="BPMNShape_CallActivity_13">
+        <di:waypoint xsi:type="dc:Point" x="412.0" y="790.0"/>
+        <di:waypoint xsi:type="dc:Point" x="412.0" y="804.0"/>
+        <di:waypoint xsi:type="dc:Point" x="412.0" y="818.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_46"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_16" bpmnElement="SequenceFlow_16" sourceElement="BPMNShape_CallActivity_13" targetElement="BPMNShape_ServiceTask_3">
+        <di:waypoint xsi:type="dc:Point" x="462.0" y="848.0"/>
+        <di:waypoint xsi:type="dc:Point" x="508.0" y="848.0"/>
+        <di:waypoint xsi:type="dc:Point" x="508.0" y="777.0"/>
+        <di:waypoint xsi:type="dc:Point" x="518.0" y="777.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_48"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_17" bpmnElement="SequenceFlow_17" sourceElement="BPMNShape_ServiceTask_3" targetElement="BPMNShape_EndEvent_3">
+        <di:waypoint xsi:type="dc:Point" x="573.0" y="802.0"/>
+        <di:waypoint xsi:type="dc:Point" x="573.0" y="828.0"/>
+        <di:waypoint xsi:type="dc:Point" x="573.0" y="854.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_53"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_MessageFlow_4" bpmnElement="MessageFlow_4" sourceElement="BPMNShape_ServiceTask_3" targetElement="BPMNShape_Participant_4">
+        <di:waypoint xsi:type="dc:Point" x="628.0" y="777.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1029.0" y="777.0"/>
+        <di:waypoint xsi:type="dc:Point" x="1029.0" y="455.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_54">
+          <dc:Bounds height="15.0" width="31.0" x="940.0" y="710.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_7" bpmnElement="SequenceFlow_7" sourceElement="BPMNShape_ExclusiveGateway_2" targetElement="BPMNShape_CallActivity_3">
+        <di:waypoint xsi:type="dc:Point" x="484.0" y="151.0"/>
+        <di:waypoint xsi:type="dc:Point" x="531.0" y="151.0"/>
+        <di:waypoint xsi:type="dc:Point" x="531.0" y="69.0"/>
+        <di:waypoint xsi:type="dc:Point" x="547.0" y="69.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_27">
+          <dc:Bounds height="15.0" width="56.0" x="517.0" y="128.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_25" bpmnElement="SequenceFlow_25" sourceElement="BPMNShape_StartEvent_4" targetElement="BPMNShape_CallActivity_15">
+        <di:waypoint xsi:type="dc:Point" x="603.0" y="259.0"/>
+        <di:waypoint xsi:type="dc:Point" x="630.0" y="259.0"/>
+        <di:waypoint xsi:type="dc:Point" x="657.0" y="259.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_59"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_27" bpmnElement="SequenceFlow_27" sourceElement="BPMNShape_CallActivity_15" targetElement="BPMNShape_EndEvent_6">
+        <di:waypoint xsi:type="dc:Point" x="777.0" y="259.0"/>
+        <di:waypoint xsi:type="dc:Point" x="808.0" y="259.0"/>
+        <di:waypoint xsi:type="dc:Point" x="840.0" y="259.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_62"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>
