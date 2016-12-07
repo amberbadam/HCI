@@ -1,0 +1,3 @@
+<mt:NewOperation xmlns:mt="http://www.example.org/MT_Message/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+         <status>Testing OAuth from SAP HCI</status>
+      </mt:NewOperation>
