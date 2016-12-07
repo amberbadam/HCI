@@ -1,0 +1,77 @@
+Manifest-Version: 1.0
+SAP-BundleType: IntegrationFlow
+Bundle-ClassPath: .,/src/main/resources/lib/gson-2.8.0.jar,/lib/gson-2
+ .8.0.jar,/src/main/resources/lib/gson-2.8.0.jar,/lib/gson-2.8.0.jar,/
+ src/main/resources/lib/gson-2.8.0.jar,/lib/gson-2.8.0.jar,/src/main/r
+ esources/lib/gson-2.8.0.jar,/lib/gson-2.8.0.jar,/src/main/resources/l
+ ib/gson-2.8.0.jar,/mapping/MM_AuthTokens_to_AuthTokenWithExpiryDate.j
+ ar,/lib/gson-2.8.0.jar,/src/main/resources/lib/gson-2.8.0.jar,/mappin
+ g/MM_AuthTokens_to_AuthTokenWithExpiryDate.jar,/lib/gson-2.8.0.jar
+Bundle-Version: 1.0.0
+SAP-RuntimeProfile: iflmap
+SAP-NodeType: IFLMAP
+Bundle-Name: com.sap.api.hci.hybris.spike.one.exception.flow
+SAP-ArtifactId: 7d169f3a-26d6-49e5-8e54-2e8a49a15874
+Bundle-ManifestVersion: 2
+Import-Package:  com.sap.it.api.mapping, com.sap.aii.mapping.value.api
+ , com.sap.it.nm.security, com.sap.esb.secure.parameter.impl, com.sap.
+ it.nm.concurrent, com.sap.esb.camel.route.policy, com.sap.esb.camel.h
+ ttp.ahc.configurer;version="[1,2)", org.springframework.transaction.s
+ upport, org.springframework.jdbc.datasource, org.mozilla.javascript, 
+ org.codehaus.groovy.reflection, org.codehaus.groovy.runtime.callsite,
+  org.codehaus.groovy.runtime.typehandling, org.codehaus.groovy.runtim
+ e, groovy.lang, org.codehaus.groovy.jsr223, com.sap.gateway.ip.core.c
+ ustomdev.util, com.sap.gateway.ip.core.customdev.logging, com.sap.gat
+ eway.ip.core.customdev.processor, com.sap.esb.camel.message.storage.a
+ pi, com.sap.it.op.agent.trace, com.sap.esb.size.limiter, com.sap.esb.
+ webservice.security.crypto.api, com.sap.esb.webservice.policy.alterna
+ tive.selector, org.apache.cxf.ws.security.wss4j, org.apache.wss4j.com
+ mon.crypto, javax.security.auth.callback, com.sap.esb.camel.jdbc.idem
+ potency.reorg, com.sap.it.iflow.model.runtime, com.sap.it.iflow.model
+ , com.sap.sod.utils.idoc.soap.interceptors, com.sap.sod.utils.soap.pr
+ ocessors, com.sap.esb.camel.jdbc.inprogress.repository, com.sap.esb.c
+ amel.jdbc.idempotency.repository, com.sap.esb.camel.security.cms, com
+ .sap.esb.camel.endpoint.configurator.api, org.apache.camel.processor.
+ idempotent.jdbc, org.apache.camel.spi, com.sap.esb.camel.mpl.access, 
+ com.sap.esb.camel.eip.splitter, com.sap.esb.camel.xmljson, com.sap.it
+ .op.ed, com.sap.it.op.agent.ed.plugins.camel.api, com.sap.esb.webserv
+ ice.authorization.supplier.api, org.apache.cxf.interceptor.security, 
+ net.sf.saxon.xpath, net.sf.saxon,com.sap.esb.application.services.cxf
+ .interceptor,com.sap.esb.security,com.sap.it.op.agent.api,com.sap.it.
+ op.agent.collector.camel,com.sap.it.op.agent.collector.cxf,com.sap.it
+ .op.agent.mpl,com.sap.sod.utils.cxf.interceptors,com.sap.sod.utils.en
+ coding.processors,com.sap.sod.utils.idoc.soap,com.sap.sod.utils.soap,
+ com.sap.sod.utils.idoc.soap.processors,javax.jms,javax.jws,javax.wsdl
+ ,javax.xml.bind.annotation,javax.xml.namespace,javax.xml.ws,org.apach
+ e.camel;version="2.8",org.apache.camel.builder;version="2.8",org.apac
+ he.camel.builder.xml;version="2.8",org.apache.camel.component.cxf,org
+ .apache.camel.model;version="2.8",org.apache.camel.processor;version=
+ "2.8",org.apache.camel.processor.aggregate;version="2.8",org.apache.c
+ amel.spring.spi;version="2.8",org.apache.commons.logging,org.apache.c
+ xf.binding,org.apache.cxf.binding.soap,org.apache.cxf.binding.soap.sp
+ ring,org.apache.cxf.bus,org.apache.cxf.bus.resource,org.apache.cxf.bu
+ s.spring,org.apache.cxf.buslifecycle,org.apache.cxf.catalog,org.apach
+ e.cxf.configuration.jsse,org.apache.cxf.configuration.spring,org.apac
+ he.cxf.endpoint,org.apache.cxf.headers,org.apache.cxf.interceptor,org
+ .apache.cxf.management.counters,org.apache.cxf.message,org.apache.cxf
+ .phase,org.apache.cxf.resource,org.apache.cxf.service.factory,org.apa
+ che.cxf.service.model,org.apache.cxf.transport,org.apache.cxf.transpo
+ rt.common.gzip,org.apache.cxf.transport.http,org.apache.cxf.transport
+ .http.policy,org.apache.cxf.workqueue,org.apache.cxf.ws.rm.persistenc
+ e,org.apache.cxf.wsdl11,org.osgi.framework;version="1.6.0",org.osgi.s
+ ervice.blueprint;version="[1.0.0,2.0.0)",org.slf4j;version="1.6",org.
+ springframework.beans.factory.config;version="3.0",com.sap.aii.ib.bom
+ .flib.types,com.sap.aii.mapping.api,com.sap.aii.mappingtool.flib3,com
+ .sap.aii.mappingtool.flib7,com.sap.aii.mappingtool.tf3,com.sap.aii.ma
+ ppingtool.tf3.rt,com.sap.aii.mappingtool.tf7,com.sap.aii.mappingtool.
+ tf7.rt,com.sap.aii.mappingtool.tfapi,com.sap.esb.webservice.audit.log
+Bundle-SymbolicName: com.sap.api.hci.hybris.spike.one.exception.flow;s
+ ingleton:=true
+Import-Service:  com.sap.esb.camel.security.cms.SignatureSplitter;mult
+ iple:=false, org.apache.cxf.ws.rm.persistence.RMStore;multiple:=false
+ , javax.sql.DataSource;multiple:=false;filter="(dataSourceName=defaul
+ t)", com.sap.esb.security.TrustManagerFactory;multiple:=false, com.sa
+ p.esb.security.KeyManagerFactory;multiple:=false, com.sap.esb.camel.e
+ ndpoint.configurator.api.EndpointConfigurator;multiple:=false;filter=
+ "(endpointType=SFTP)",com.sap.esb.webservice.audit.log.AuditLogger 
+
