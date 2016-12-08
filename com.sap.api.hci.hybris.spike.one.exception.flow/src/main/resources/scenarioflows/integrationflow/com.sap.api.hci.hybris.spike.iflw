@@ -95,7 +95,7 @@
         </ifl:property>
         <ifl:property>
           <key>urlPath</key>
-          <value>/Products2</value>
+          <value>/products/search</value>
         </ifl:property>
         <ifl:property>
           <key>senderAuthType</key>
