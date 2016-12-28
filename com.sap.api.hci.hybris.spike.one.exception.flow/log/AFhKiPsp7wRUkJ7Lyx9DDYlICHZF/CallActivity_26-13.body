@@ -1,0 +1,1 @@
+<?xml version='1.0' encoding='UTF-8'?><Root xmlns:xs="http://www.w3.org/2001/XMLSchema"><userGroups><name>B2B Group</name><uid>b2bgroup</uid></userGroups><userGroups><name>B2B Customer Group</name><uid>b2bcustomergroup</uid></userGroups><userGroups><uid>UG_US02_01</uid></userGroups><userGroups><uid>customergroup</uid></userGroups></Root>

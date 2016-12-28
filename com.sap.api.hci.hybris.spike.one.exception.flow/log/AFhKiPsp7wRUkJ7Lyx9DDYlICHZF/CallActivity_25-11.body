@@ -1,0 +1,16 @@
+{
+"Root":
+{
+   "userGroups" : [ {
+      "name" : "B2B Group",
+      "uid" : "b2bgroup"
+   }, {
+      "name" : "B2B Customer Group",
+      "uid" : "b2bcustomergroup"
+   }, {
+      "uid" : "UG_US02_01"
+   }, {
+      "uid" : "customergroup"
+   } ]
+}
+}
