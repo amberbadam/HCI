@@ -1,0 +1,7 @@
+#Parameter data and values
+#Mon Jan 04 13:46:32 CET 2016
+artifactname=C4CUser__PH2LOG030
+ERP_address_20=/ERP/COD/DEBMAS_CFS.DEBMAS06_TE5CLNT100
+Host=my312682.crm.ondemand.com
+COD_proxyType_0=default
+Port=443
