@@ -1,0 +1,69 @@
+Manifest-Version: 1.0
+Bundle-ClassPath: .,/mapping/ERP_COD_BusinessPartnerERPBulkReplicateRe
+ quest.jar
+Origin-Bundle-SymbolicName: com.sap.scenarios.erp2cod.customermaster.r
+ eplicate
+Bundle-Name: Replicate Business Partner from SAP ERP TE5CLNT100
+Origin-ModifiedDate: 1439190082536
+Import-Service:  com.sap.esb.camel.security.cms.SignatureSplitter;mult
+ iple:=false, org.apache.cxf.ws.rm.persistence.RMStore;multiple:=false
+ , javax.sql.DataSource;multiple:=false;filter="(dataSourceName=defaul
+ t)", com.sap.esb.security.TrustManagerFactory;multiple:=false,  com.s
+ ap.esb.security.KeyManagerFactory;multiple:=false, com.sap.esb.camel.
+ endpoint.configurator.api.EndpointConfigurator;multiple:=false;filter
+ ="(endpointType=SFTP)",com.sap.esb.webservice.audit.log.AuditLogger 
+SAP-BundleType: IntegrationFlow
+Bundle-Version: 1.1508.1
+SAP-NodeType: IFLMAP
+Origin-Bundle-Version: 1.1508.1
+SAP-ArtifactId: 3c8a7f32-5ce2-4f2e-80dd-103c347476c3
+Bundle-ManifestVersion: 2
+Bundle-Description: 
+Import-Package:  org.springframework.jdbc.datasource, com.sap.it.api.m
+ apping, com.sap.aii.mapping.value.api, com.sap.esb.camel.message.stor
+ age.api, com.sap.it.op.agent.trace, com.sap.esb.webservice.security.c
+ rypto.api, com.sap.esb.webservice.policy.alternative.selector, org.ap
+ ache.cxf.ws.security.wss4j, org.apache.wss4j.common.crypto, javax.sec
+ urity.auth.callback, com.sap.esb.camel.jdbc.idempotency.reorg, com.sa
+ p.it.iflow.model.runtime, com.sap.it.iflow.model, com.sap.sod.utils.s
+ oap.processors, com.sap.esb.camel.jdbc.inprogress.repository, com.sap
+ .esb.camel.jdbc.idempotency.repository, com.sap.esb.camel.security.cm
+ s, org.apache.camel.processor.idempotent.jdbc, org.apache.camel.spi, 
+ com.sap.esb.camel.endpoint.configurator.api, com.sap.it.op.ed, com.sa
+ p.esb.webservice.authorization.supplier.api, org.apache.cxf.intercept
+ or.security, com.sap.esb.camel.mpl.access, com.sap.esb.camel.eip.spli
+ tter, com.sap.it.op.agent.ed.plugins.camel.api, com.sap.esb.camel.xml
+ json, net.sf.saxon.xpath, net.sf.saxon,com.sap.esb.application.servic
+ es.cxf.interceptor,com.sap.esb.security,com.sap.it.op.agent.api,com.s
+ ap.it.op.agent.collector.camel,com.sap.it.op.agent.collector.cxf,com.
+ sap.it.op.agent.mpl,com.sap.sod.utils.cxf.interceptors,com.sap.sod.ut
+ ils.encoding.processors,com.sap.sod.utils.idoc.soap,com.sap.sod.utils
+ .soap,com.sap.sod.utils.idoc.soap.processors,javax.jms,javax.jws,java
+ x.wsdl,javax.xml.bind.annotation,javax.xml.namespace,javax.xml.ws,org
+ .apache.camel;version="2.8",org.apache.camel.builder;version="2.8",or
+ g.apache.camel.builder.xml;version="2.8",org.apache.camel.component.c
+ xf,org.apache.camel.model;version="2.8",org.apache.camel.processor;ve
+ rsion="2.8",org.apache.camel.processor.aggregate;version="2.8",org.ap
+ ache.camel.spring.spi;version="2.8",org.apache.commons.logging,org.ap
+ ache.cxf.binding,org.apache.cxf.binding.soap,org.apache.cxf.binding.s
+ oap.spring,org.apache.cxf.bus,org.apache.cxf.bus.resource,org.apache.
+ cxf.bus.spring,org.apache.cxf.buslifecycle,org.apache.cxf.catalog,org
+ .apache.cxf.configuration.jsse,org.apache.cxf.configuration.spring,or
+ g.apache.cxf.endpoint,org.apache.cxf.headers,org.apache.cxf.intercept
+ or,org.apache.cxf.management.counters,org.apache.cxf.message,org.apac
+ he.cxf.phase,org.apache.cxf.resource,org.apache.cxf.service.factory,o
+ rg.apache.cxf.service.model,org.apache.cxf.transport,org.apache.cxf.t
+ ransport.common.gzip,org.apache.cxf.transport.http,org.apache.cxf.tra
+ nsport.http.policy,org.apache.cxf.workqueue,org.apache.cxf.ws.rm.pers
+ istence,org.apache.cxf.wsdl11,org.osgi.framework;version="1.6.0",org.
+ osgi.service.blueprint;version="[1.0.0,2.0.0)",org.slf4j;version="1.6
+ ",org.springframework.beans.factory.config;version="3.0",com.sap.aii.
+ ib.bom.flib.types,com.sap.aii.mapping.api,com.sap.aii.mappingtool.fli
+ b3,com.sap.aii.mappingtool.flib7,com.sap.aii.mappingtool.tf3,com.sap.
+ aii.mappingtool.tf3.rt,com.sap.aii.mappingtool.tf7,com.sap.aii.mappin
+ gtool.tf7.rt,com.sap.aii.mappingtool.tfapi,com.sap.esb.webservice.aud
+ it.log
+Bundle-SymbolicName: com.sap.scenarios.erp2cod.customermaster.replicat
+ e_TE5CLNT100;singleton:=true
+Origin-Bundle-Name: Replicate Business Partner from SAP ERP
+

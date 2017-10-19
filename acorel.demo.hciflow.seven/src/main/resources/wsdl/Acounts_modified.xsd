@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="AccountCollection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Account" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="AccountID" type="xs:int"></xs:element>
+							<xs:element name="AccountName" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="Role" type="xs:string"></xs:element>
+							<xs:element name="CreatedBy" type="xs:string"></xs:element>
+							<xs:element name="CreatedOn" type="xs:dateTime"></xs:element>
+							<xs:element name="ABCClassificationCodeText" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="ABCClassificationCode" type="xs:string" minOccurs="0"></xs:element>
+							<xs:element name="AccountName2" type="xs:string"></xs:element>
+							<xs:element name="Address" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="CityName" type="xs:string"></xs:element>
+										<xs:element name="CountyName" type="xs:string"></xs:element>
+										<xs:element name="CountryCode" type="xs:string"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

@@ -1,0 +1,69 @@
+Manifest-Version: 1.0
+Bundle-Description: 
+Bundle-SymbolicName: acorel.demo.hciflow2;singleton:=true
+Bundle-ManifestVersion: 2
+Import-Package:  com.sap.esb.secure.parameter.impl, com.sap.it.nm.conc
+ urrent, com.sap.esb.camel.route.policy, com.sap.it.rt.adapter.odata.r
+ esponse, com.sap.it.rt.adapter.odata.destination, com.sap.it.rt.adapt
+ er.odata.auth, com.sap.gateway.core.ip.processor.odataprocessors, com
+ .sap.gateway.core.ip.component.odata, com.sap.it.nm.security, org.spr
+ ingframework.transaction.support, org.springframework.jdbc.datasource
+ , com.sap.esb.camel.message.storage.api, com.sap.it.op.agent.trace, c
+ om.sap.esb.size.limiter, com.sap.esb.camel.webservice.endpoint.config
+ urer, com.sap.esb.webservice.security.crypto.api, com.sap.esb.webserv
+ ice.policy.alternative.selector, org.apache.cxf.ws.security.wss4j, or
+ g.apache.wss4j.common.crypto, javax.security.auth.callback, com.sap.e
+ sb.camel.jdbc.idempotency.reorg, com.sap.it.iflow.model.runtime, com.
+ sap.it.iflow.model, com.sap.sod.utils.idoc.soap.interceptors, com.sap
+ .sod.utils.soap.processors, com.sap.esb.camel.jdbc.inprogress.reposit
+ ory, com.sap.esb.camel.jdbc.idempotency.repository, com.sap.esb.camel
+ .security.cms, com.sap.esb.camel.endpoint.configurator.api, org.apach
+ e.camel.processor.idempotent.jdbc, org.apache.camel.spi, com.sap.esb.
+ camel.mpl.access, com.sap.esb.camel.eip.splitter, com.sap.esb.camel.x
+ mljson, com.sap.it.op.ed, com.sap.it.op.agent.ed.plugins.camel.api, c
+ om.sap.esb.webservice.authorization.supplier.api, org.apache.cxf.inte
+ rceptor.security, net.sf.saxon.xpath, net.sf.saxon,com.sap.esb.applic
+ ation.services.cxf.interceptor,com.sap.esb.security,com.sap.it.op.age
+ nt.api,com.sap.it.op.agent.collector.camel,com.sap.it.op.agent.collec
+ tor.cxf,com.sap.it.op.agent.mpl,com.sap.sod.utils.cxf.interceptors,co
+ m.sap.sod.utils.encoding.processors,com.sap.sod.utils.idoc.soap,com.s
+ ap.sod.utils.soap,com.sap.sod.utils.idoc.soap.processors,javax.jms,ja
+ vax.jws,javax.wsdl,javax.xml.bind.annotation,javax.xml.namespace,java
+ x.xml.ws,org.apache.camel;version="2.8",org.apache.camel.builder;vers
+ ion="2.8",org.apache.camel.builder.xml;version="2.8",org.apache.camel
+ .component.cxf,org.apache.camel.model;version="2.8",org.apache.camel.
+ processor;version="2.8",org.apache.camel.processor.aggregate;version=
+ "2.8",org.apache.camel.spring.spi;version="2.8",org.apache.commons.lo
+ gging,org.apache.cxf.binding,org.apache.cxf.binding.soap,org.apache.c
+ xf.binding.soap.spring,org.apache.cxf.bus,org.apache.cxf.bus.resource
+ ,org.apache.cxf.bus.spring,org.apache.cxf.buslifecycle,org.apache.cxf
+ .catalog,org.apache.cxf.configuration.jsse,org.apache.cxf.configurati
+ on.spring,org.apache.cxf.endpoint,org.apache.cxf.headers,org.apache.c
+ xf.interceptor,org.apache.cxf.management.counters,org.apache.cxf.mess
+ age,org.apache.cxf.phase,org.apache.cxf.resource,org.apache.cxf.servi
+ ce.factory,org.apache.cxf.service.model,org.apache.cxf.transport,org.
+ apache.cxf.transport.common.gzip,org.apache.cxf.transport.http,org.ap
+ ache.cxf.transport.http.policy,org.apache.cxf.workqueue,org.apache.cx
+ f.ws.rm.persistence,org.apache.cxf.wsdl11,org.osgi.framework;version=
+ "1.6.0",org.osgi.service.blueprint;version="[1.0.0,2.0.0)",org.slf4j;
+ version="1.6",org.springframework.beans.factory.config;version="3.0",
+ com.sap.aii.ib.bom.flib.types,com.sap.aii.mapping.api,com.sap.aii.map
+ pingtool.flib3,com.sap.aii.mappingtool.flib7,com.sap.aii.mappingtool.
+ tf3,com.sap.aii.mappingtool.tf3.rt,com.sap.aii.mappingtool.tf7,com.sa
+ p.aii.mappingtool.tf7.rt,com.sap.aii.mappingtool.tfapi,com.sap.esb.we
+ bservice.audit.log
+SAP-RuntimeProfile: iflmap
+SAP-ArtifactId: e0e141d5-b23a-421a-8611-232721b119cf
+Bundle-Version: 1.0.0
+Bundle-Name: acorel.demo.hciflow2
+Bundle-ClassPath: .
+SAP-NodeType: IFLMAP
+SAP-BundleType: IntegrationFlow
+Import-Service:  com.sap.esb.camel.security.cms.SignatureSplitter;mult
+ iple:=false, org.apache.cxf.ws.rm.persistence.RMStore;multiple:=false
+ , javax.sql.DataSource;multiple:=false;filter="(dataSourceName=defaul
+ t)", com.sap.esb.security.TrustManagerFactory;multiple:=false, com.sa
+ p.esb.security.KeyManagerFactory;multiple:=false, com.sap.esb.camel.e
+ ndpoint.configurator.api.EndpointConfigurator;multiple:=false;filter=
+ "(endpointType=SFTP)",com.sap.esb.webservice.audit.log.AuditLogger 
+

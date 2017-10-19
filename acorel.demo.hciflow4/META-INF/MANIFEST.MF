@@ -1,0 +1,75 @@
+Manifest-Version: 1.0
+Bundle-Description: 
+Bundle-SymbolicName: acorel.demo.hciflow4;singleton:=true
+Bundle-ManifestVersion: 2
+Import-Package:  com.sap.esb.secure.parameter.impl, com.sap.it.nm.conc
+ urrent, com.sap.esb.camel.route.policy, com.sap.it.rt.adapter.odata.r
+ esponse, com.sap.it.rt.adapter.odata.destination, com.sap.it.rt.adapt
+ er.odata.auth, com.sap.gateway.core.ip.processor.odataprocessors, com
+ .sap.gateway.core.ip.component.odata, com.sap.it.nm.security, org.spr
+ ingframework.transaction.support, org.springframework.jdbc.datasource
+ , org.mozilla.javascript, org.codehaus.groovy.reflection, org.codehau
+ s.groovy.runtime.callsite, org.codehaus.groovy.runtime.typehandling, 
+ org.codehaus.groovy.runtime, groovy.lang, org.codehaus.groovy.jsr223,
+  com.sap.gateway.ip.core.customdev.util, com.sap.gateway.ip.core.cust
+ omdev.logging, com.sap.gateway.ip.core.customdev.processor, com.sap.i
+ t.rt.camel.aggregate.strategies, com.sap.esb.camel.message.storage.ap
+ i, com.sap.it.op.agent.trace, com.sap.esb.size.limiter, com.sap.esb.c
+ amel.webservice.endpoint.configurer, com.sap.esb.webservice.security.
+ crypto.api, com.sap.esb.webservice.policy.alternative.selector, org.a
+ pache.cxf.ws.security.wss4j, org.apache.wss4j.common.crypto, javax.se
+ curity.auth.callback, com.sap.esb.camel.jdbc.idempotency.reorg, com.s
+ ap.it.iflow.model.runtime, com.sap.it.iflow.model, com.sap.sod.utils.
+ idoc.soap.interceptors, com.sap.sod.utils.soap.processors, com.sap.es
+ b.camel.jdbc.inprogress.repository, com.sap.esb.camel.jdbc.idempotenc
+ y.repository, com.sap.esb.camel.security.cms, com.sap.esb.camel.endpo
+ int.configurator.api, org.apache.camel.processor.idempotent.jdbc, org
+ .apache.camel.spi, com.sap.esb.camel.mpl.access, com.sap.esb.camel.ei
+ p.splitter, com.sap.esb.camel.xmljson, com.sap.it.op.ed, com.sap.it.o
+ p.agent.ed.plugins.camel.api, com.sap.esb.webservice.authorization.su
+ pplier.api, org.apache.cxf.interceptor.security, net.sf.saxon.xpath, 
+ net.sf.saxon,com.sap.esb.application.services.cxf.interceptor,com.sap
+ .esb.security,com.sap.it.op.agent.api,com.sap.it.op.agent.collector.c
+ amel,com.sap.it.op.agent.collector.cxf,com.sap.it.op.agent.mpl,com.sa
+ p.sod.utils.cxf.interceptors,com.sap.sod.utils.encoding.processors,co
+ m.sap.sod.utils.idoc.soap,com.sap.sod.utils.soap,com.sap.sod.utils.id
+ oc.soap.processors,javax.jms,javax.jws,javax.wsdl,javax.xml.bind.anno
+ tation,javax.xml.namespace,javax.xml.ws,org.apache.camel;version="2.8
+ ",org.apache.camel.builder;version="2.8",org.apache.camel.builder.xml
+ ;version="2.8",org.apache.camel.component.cxf,org.apache.camel.model;
+ version="2.8",org.apache.camel.processor;version="2.8",org.apache.cam
+ el.processor.aggregate;version="2.8",org.apache.camel.spring.spi;vers
+ ion="2.8",org.apache.commons.logging,org.apache.cxf.binding,org.apach
+ e.cxf.binding.soap,org.apache.cxf.binding.soap.spring,org.apache.cxf.
+ bus,org.apache.cxf.bus.resource,org.apache.cxf.bus.spring,org.apache.
+ cxf.buslifecycle,org.apache.cxf.catalog,org.apache.cxf.configuration.
+ jsse,org.apache.cxf.configuration.spring,org.apache.cxf.endpoint,org.
+ apache.cxf.headers,org.apache.cxf.interceptor,org.apache.cxf.manageme
+ nt.counters,org.apache.cxf.message,org.apache.cxf.phase,org.apache.cx
+ f.resource,org.apache.cxf.service.factory,org.apache.cxf.service.mode
+ l,org.apache.cxf.transport,org.apache.cxf.transport.common.gzip,org.a
+ pache.cxf.transport.http,org.apache.cxf.transport.http.policy,org.apa
+ che.cxf.workqueue,org.apache.cxf.ws.rm.persistence,org.apache.cxf.wsd
+ l11,org.osgi.framework;version="1.6.0",org.osgi.service.blueprint;ver
+ sion="[1.0.0,2.0.0)",org.slf4j;version="1.6",org.springframework.bean
+ s.factory.config;version="3.0",com.sap.aii.ib.bom.flib.types,com.sap.
+ aii.mapping.api,com.sap.aii.mappingtool.flib3,com.sap.aii.mappingtool
+ .flib7,com.sap.aii.mappingtool.tf3,com.sap.aii.mappingtool.tf3.rt,com
+ .sap.aii.mappingtool.tf7,com.sap.aii.mappingtool.tf7.rt,com.sap.aii.m
+ appingtool.tfapi,com.sap.esb.webservice.audit.log
+SAP-RuntimeProfile: iflmap
+SAP-ArtifactId: 7ee124fc-9a74-4828-9410-115824302212
+Bundle-Version: 1.0.0
+Bundle-Name: acorel.demo.hciflow4
+Bundle-ClassPath: .,/lib/gson-2.8.0.jar,/src/main/resources/lib/gson-2
+ .8.0.jar
+SAP-NodeType: IFLMAP
+SAP-BundleType: IntegrationFlow
+Import-Service:  com.sap.esb.camel.security.cms.SignatureSplitter;mult
+ iple:=false, org.apache.cxf.ws.rm.persistence.RMStore;multiple:=false
+ , javax.sql.DataSource;multiple:=false;filter="(dataSourceName=defaul
+ t)", com.sap.esb.security.TrustManagerFactory;multiple:=false, com.sa
+ p.esb.security.KeyManagerFactory;multiple:=false, com.sap.esb.camel.e
+ ndpoint.configurator.api.EndpointConfigurator;multiple:=false;filter=
+ "(endpointType=SFTP)",com.sap.esb.webservice.audit.log.AuditLogger 
+

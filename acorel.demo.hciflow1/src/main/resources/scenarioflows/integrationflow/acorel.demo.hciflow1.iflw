@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:ifl="http:///com.sap.ifl.model/Ifl.xsd" xmlns:ns="http://www.w3.org/2001/XMLSchema" id="Definitions_1" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.3.1.Final-v20161006-1425-B58" name="Definitions 1" targetNamespace="http://com.sap.it.ifl.tooling/default/flow">
+  <bpmn2:extensionElements>
+    <ifl:property>
+      <key>IntegrationFlowVersion</key>
+      <value>1.0</value>
+    </ifl:property>
+  </bpmn2:extensionElements>
+  <bpmn2:collaboration id="Collaboration_1" name="Default Collaboration">
+    <bpmn2:extensionElements>
+      <ifl:property>
+        <key>cmdVariantUri</key>
+        <value>ctype::IFlowVariant/cname::IFlowConfiguration/version::1.0</value>
+      </ifl:property>
+      <ifl:property>
+        <key>routeid</key>
+        <value>MyProject</value>
+      </ifl:property>
+      <ifl:property>
+        <key>errorStrategy</key>
+        <value>None</value>
+      </ifl:property>
+      <ifl:property>
+        <key>componentVersion</key>
+        <value>1.0</value>
+      </ifl:property>
+      <ifl:property>
+        <key>allowedHeaderList</key>
+        <value>AccountName|AccountID</value>
+      </ifl:property>
+      <ifl:property>
+        <key>traceLevel</key>
+        <value>Message Body and Header</value>
+      </ifl:property>
+    </bpmn2:extensionElements>
+    <bpmn2:participant id="Participant_1" ifl:type="EndpointSender" name="PostMan">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>cmdVariantUri</key>
+          <value>ctype::FlowstepVariant/cname::Sender/version::1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ifl:type</key>
+          <value>EndpointSender</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+    </bpmn2:participant>
+    <bpmn2:participant id="Participant_3" ifl:type="IntegrationProcess" name="Integration Process" processRef="Process_1"/>
+    <bpmn2:messageFlow id="MessageFlow_1" name="" sourceRef="Participant_1" targetRef="StartEvent_1">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>Name</key>
+        </ifl:property>
+        <ifl:property>
+          <key>Description</key>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentType</key>
+          <value>HTTPS</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocol</key>
+          <value>HTTPS</value>
+        </ifl:property>
+        <ifl:property>
+          <key>TransportProtocolVersion</key>
+          <value>1.0.3</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocol</key>
+          <value>None</value>
+        </ifl:property>
+        <ifl:property>
+          <key>MessageProtocolVersion</key>
+          <value>1.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentNS</key>
+          <value>sap</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVId</key>
+          <value>1.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>ComponentSWCVName</key>
+          <value>1.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>urlPath</key>
+          <value>/hcidemo/exercise1</value>
+        </ifl:property>
+        <ifl:property>
+          <key>senderAuthType</key>
+          <value>RoleBased</value>
+        </ifl:property>
+        <ifl:property>
+          <key>userRole</key>
+          <value>ESBMessaging.send</value>
+        </ifl:property>
+        <ifl:property>
+          <key>xsrfProtection</key>
+          <value>0</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+    </bpmn2:messageFlow>
+  </bpmn2:collaboration>
+  <bpmn2:process id="Process_1" name="Integration Process" isExecutable="false">
+    <bpmn2:extensionElements>
+      <ifl:property>
+        <key>cmdVariantUri</key>
+        <value>ctype::FlowElementVariant/cname::IntegrationProcess/version::1.1.2</value>
+      </ifl:property>
+      <ifl:property>
+        <key>transactionTimeout</key>
+        <value>30</value>
+      </ifl:property>
+      <ifl:property>
+        <key>componentVersion</key>
+        <value>1.1</value>
+      </ifl:property>
+      <ifl:property>
+        <key>transactionalHandling</key>
+        <value>Required</value>
+      </ifl:property>
+    </bpmn2:extensionElements>
+    <bpmn2:startEvent id="StartEvent_1" name="Start">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>cmdVariantUri</key>
+          <value>ctype::FlowstepVariant/cname::MessageStartEvent/version::1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.0</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
+      <bpmn2:messageEventDefinition id="MessageEventDefinition_1"/>
+    </bpmn2:startEvent>
+    <bpmn2:endEvent id="EndEvent_1" name="End">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>cmdVariantUri</key>
+          <value>ctype::FlowstepVariant/cname::MessageEndEvent/version::1.1.0</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.1</value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
+      <bpmn2:messageEventDefinition id="MessageEventDefinition_2"/>
+    </bpmn2:endEvent>
+    <bpmn2:callActivity id="CallActivity_2" name="Content Modifier">
+      <bpmn2:extensionElements>
+        <ifl:property>
+          <key>activityType</key>
+          <value>Enricher</value>
+        </ifl:property>
+        <ifl:property>
+          <key>componentVersion</key>
+          <value>1.2</value>
+        </ifl:property>
+        <ifl:property>
+          <key>wrapContent</key>
+          <value>&lt;Response>&#xD;
+&lt;AccountID>${header.ID}&lt;/AccountID>&#xD;
+&lt;AccountName>${header.Name}&lt;/AccountName>&#xD;
+&lt;Payload>${in.body}&lt;/Payload>&#xD;
+&lt;/Response></value>
+        </ifl:property>
+        <ifl:property>
+          <key>headerTable</key>
+          <value>&lt;row>&lt;cell id=&quot;Action&quot;>Create&lt;/cell>&lt;cell id=&quot;Name&quot;>ID&lt;/cell>&lt;cell id=&quot;Type&quot;>header&lt;/cell>&lt;cell id=&quot;Datatype&quot;>java.lang.String&lt;/cell>&lt;cell id=&quot;Value&quot;>AccountID&lt;/cell>&lt;cell id=&quot;Default&quot;>&lt;/cell>&lt;/row>&lt;row>&lt;cell id=&quot;Action&quot;>Create&lt;/cell>&lt;cell id=&quot;Name&quot;>Name&lt;/cell>&lt;cell id=&quot;Type&quot;>header&lt;/cell>&lt;cell id=&quot;Datatype&quot;>java.lang.String&lt;/cell>&lt;cell id=&quot;Value&quot;>AccountName&lt;/cell>&lt;cell id=&quot;Default&quot;>&lt;/cell>&lt;/row></value>
+        </ifl:property>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:sequenceFlow id="SequenceFlow_4" sourceRef="CallActivity_2" targetRef="EndEvent_1"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_1" sourceRef="StartEvent_1" targetRef="CallActivity_2"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1" name="Default Collaboration Diagram">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_1">
+      <bpmndi:BPMNShape id="BPMNShape_Participant_1" bpmnElement="Participant_1" isHorizontal="false">
+        <dc:Bounds height="140.0" width="100.0" x="40.0" y="100.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_1">
+          <dc:Bounds height="15.0" width="48.0" x="66.0" y="103.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Participant_3" bpmnElement="Participant_3" isHorizontal="false">
+        <dc:Bounds height="220.0" width="540.0" x="185.0" y="60.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_3">
+          <dc:Bounds height="15.0" width="107.0" x="401.0" y="63.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_StartEvent_1" bpmnElement="StartEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="205.0" y="150.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4">
+          <dc:Bounds height="15.0" width="25.0" x="210.0" y="186.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_1" bpmnElement="EndEvent_1">
+        <dc:Bounds height="36.0" width="36.0" x="675.0" y="150.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_5">
+          <dc:Bounds height="15.0" width="22.0" x="682.0" y="186.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_CallActivity_2" bpmnElement="CallActivity_2" isExpanded="true">
+        <dc:Bounds height="60.0" width="120.0" x="315.0" y="138.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_10">
+          <dc:Bounds height="15.0" width="89.0" x="330.0" y="160.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_MessageFlow_1" bpmnElement="MessageFlow_1" sourceElement="BPMNShape_Participant_1" targetElement="BPMNShape_StartEvent_1">
+        <di:waypoint xsi:type="dc:Point" x="140.0" y="168.0"/>
+        <di:waypoint xsi:type="dc:Point" x="172.0" y="168.0"/>
+        <di:waypoint xsi:type="dc:Point" x="205.0" y="168.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_7">
+          <dc:Bounds height="15.0" width="39.0" x="154.0" y="169.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_4" bpmnElement="SequenceFlow_4" sourceElement="BPMNShape_CallActivity_2" targetElement="BPMNShape_EndEvent_1">
+        <di:waypoint xsi:type="dc:Point" x="435.0" y="168.0"/>
+        <di:waypoint xsi:type="dc:Point" x="555.0" y="168.0"/>
+        <di:waypoint xsi:type="dc:Point" x="675.0" y="168.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_11"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_1" bpmnElement="SequenceFlow_1" sourceElement="BPMNShape_StartEvent_1" targetElement="BPMNShape_CallActivity_2">
+        <di:waypoint xsi:type="dc:Point" x="241.0" y="168.0"/>
+        <di:waypoint xsi:type="dc:Point" x="278.0" y="168.0"/>
+        <di:waypoint xsi:type="dc:Point" x="315.0" y="168.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_2"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>

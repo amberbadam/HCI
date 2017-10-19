@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- XML Schema Generated from XML Document on Mon Jun 12 2017 17:44:14 
+		GMT+0200 (W. Europe Daylight Time) -->
+	<!-- with XmlGrid.net Free Online Service http://xmlgrid.net -->
+	<xs:element name="AccountCollection">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Account" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="RoleCode" type="xs:string"></xs:element>
+							<xs:element name="RoleCodeText" type="xs:string"></xs:element>
+							<xs:element name="AccountID" type="xs:int"></xs:element>
+							<xs:element name="CityName" type="xs:string"></xs:element>
+							<xs:element name="CreatedBy" type="xs:string"></xs:element>
+							<xs:element name="CreatedOn" type="xs:dateTime"></xs:element>
+							<xs:element name="AccountName" type="xs:string"></xs:element>
+							<xs:element name="CountyName" type="xs:string"></xs:element>
+							<xs:element name="CountryCode" type="xs:string"></xs:element>
+							<xs:element name="ABCClassificationCodeText" type="xs:string"></xs:element>
+							<xs:element name="ABCClassificationCode" type="xs:string"></xs:element>
+							<xs:element name="AccountName2" type="xs:string"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

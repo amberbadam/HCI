@@ -1,11 +1,7 @@
 Manifest-Version: 1.0
-SAP-BundleType: IntegrationFlow
-Bundle-ClassPath: .
-Bundle-Version: 1.0.0
-SAP-RuntimeProfile: iflmap
-SAP-NodeType: IFLMAP
-Bundle-Name: com.sap.lighting.integration.hcp.productprice
-SAP-ArtifactId: 226f86e1-7cae-4f94-b029-4d18c3e633f0
+Bundle-Description: 
+Bundle-SymbolicName: com.sap.lighting.integration.hcp.productprice; si
+ ngleton:=true
 Bundle-ManifestVersion: 2
 Import-Package:  com.sap.it.nm.security, com.sap.esb.secure.parameter.
  impl, com.sap.it.nm.concurrent, com.sap.esb.camel.route.policy, com.s
@@ -58,8 +54,13 @@ Import-Package:  com.sap.it.nm.security, com.sap.esb.secure.parameter.
  ii.mappingtool.tf3.rt,com.sap.aii.mappingtool.tf7,com.sap.aii.mapping
  tool.tf7.rt,com.sap.aii.mappingtool.tfapi,com.sap.esb.webservice.audi
  t.log
-Bundle-SymbolicName: com.sap.lighting.integration.hcp.productprice; si
- ngleton:=true
+SAP-RuntimeProfile: iflmap
+SAP-ArtifactId: 226f86e1-7cae-4f94-b029-4d18c3e633f0
+Bundle-Version: 1.0.0
+Bundle-Name: com.sap.lighting.integration.hcp.productprice
+Bundle-ClassPath: .
+SAP-NodeType: IFLMAP
+SAP-BundleType: IntegrationFlow
 Import-Service:  com.sap.esb.camel.security.cms.SignatureSplitter;mult
  iple:=false, org.apache.cxf.ws.rm.persistence.RMStore;multiple:=false
  , javax.sql.DataSource;multiple:=false;filter="(dataSourceName=defaul
